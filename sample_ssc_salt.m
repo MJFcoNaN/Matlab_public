@@ -4,8 +4,8 @@
 % E-mail    : mjfconan@outlook.com
 % 20-Mar-2017 20:43:02
 %
-% Every excel file must have these columns 
-% and the 1st row must be these certain names.
+% Every excel sheets must have these columns 
+% and the 1st row must at least have these certain names.
 % 
 % There could be more unused columns, and the order of all columns will be 
 % processed correctly automatically.
@@ -41,7 +41,7 @@
 %               6206        2017/1/18	9:38:22     0.803	g
 % 
 % =========================================================================
-% ÑÎ¶È¡¢Ğü¸¡Îï²â¶¨¼ÇÂ¼±í2.xlsx
+% ç›åº¦ã€æ‚¬æµ®ç‰©æµ‹å®šè®°å½•è¡¨2.xlsx
 % 
 % ##### #####  CAUSTIONS 1 #####  #####  
 % "sample_id" is the number sticked on the glass bottles, 
@@ -82,12 +82,12 @@
 %
 %   sheet "green"
 %
-%               sample_id	salt	Ë®ÑùÈİ»ı	filter_id	ÂËÖ½ºÅ2	ÂËÖ½ºÅ3
+%               sample_id	salt	æ°´æ ·å®¹ç§¯	filter_id	æ»¤çº¸å·2	æ»¤çº¸å·3
 %               1           0.1884              8872					
 %               2           0.1884              8873					
 %               3           0.1867              8874			
 % =========================================================================
-% "»ã×Ü.xlsx"
+% "æ±‡æ€».xlsx"
 %  Only one sheet, namely "all", will be considered.
 %  Missing data is OK, 
 %  then the sample_id is the base value such as 10000, 20000.
@@ -99,17 +99,17 @@
 %  "color_list", "color_value"
 % ##### #####       #####  #####
 %
-%           site       tide     date        hour	h	layer Æ¿ºÅ sample_id
-%           ÄÏ²ÛÉÏ       Ğ¡     2016/12/6       8	10	   0	2	20002 
-%           ÄÏ²ÛÉÏ       Ğ¡     2016/12/6       8	10	   0.2	3	20003 
-%           ÄÏ²ÛÉÏ       Ğ¡     2016/12/6       8	10	   0.4	4	20004 
-%           B3          ´ó	  2016/12/16	 17   5.6	 0.6      10000 
-%           B3          ´ó	  2016/12/16	 17	  5.6	 0.8	  10000 
-%           B3          ´ó	  2016/12/16	 17	  5.6	 1	  375 10375 
-%           B3          ´ó	  2016/12/16	 18	  4.2	 0	  376 10376 
-%           ±±¸ÛÖĞ       Ğ¡	    2016/12/8       9	8.6	   0.6	184	30184 
-%           ±±¸ÛÖĞ       Ğ¡	    2016/12/8       9	8.6    0.8	185	30185 
-%           ±±¸ÛÖĞ       Ğ¡	    2016/12/8       9	8.6	   1	186	30186 
+%           site       tide     date        hour	h	layer ç“¶å· sample_id
+%           å—æ§½ä¸Š       å°     2016/12/6       8	10	   0	2	20002 
+%           å—æ§½ä¸Š       å°     2016/12/6       8	10	   0.2	3	20003 
+%           å—æ§½ä¸Š       å°     2016/12/6       8	10	   0.4	4	20004 
+%           B3          å¤§	  2016/12/16	 17   5.6	 0.6      10000 
+%           B3          å¤§	  2016/12/16	 17	  5.6	 0.8	  10000 
+%           B3          å¤§	  2016/12/16	 17	  5.6	 1	  375 10375 
+%           B3          å¤§	  2016/12/16	 18	  4.2	 0	  376 10376 
+%           åŒ—æ¸¯ä¸­       å°	    2016/12/8       9	8.6	   0.6	184	30184 
+%           åŒ—æ¸¯ä¸­       å°	    2016/12/8       9	8.6    0.8	185	30185 
+%           åŒ—æ¸¯ä¸­       å°	    2016/12/8       9	8.6	   1	186	30186 
 %
 % =========================================================================
 %% ========================================================================
@@ -121,13 +121,13 @@ base_value    = 1E4;
 color_list    = {'red', 'white', 'dark_blue', 'light_blue'};
 color_value   = [  1,     2,        3,            4]  * base_value;
 
-data_dir      = '/Users/mjfconan/SSCË®Ñù';
+data_dir      = '/Users/mjfconan/SSCæ°´æ ·';
 % blank
 xls_ssc_00    = fullfile(data_dir, 'kongbai.xlsx');
 % added filters
 xls_ssc_01    = fullfile(data_dir, 'zongzhong.xlsx');
-xls_salinity  = fullfile(data_dir, 'ÑÎ¶È¡¢Ğü¸¡Îï²â¶¨¼ÇÂ¼±í2.xlsx');
-xls_position  = fullfile(data_dir, '»ã×Ü.xlsx');
+xls_salinity  = fullfile(data_dir, 'ç›åº¦ã€æ‚¬æµ®ç‰©æµ‹å®šè®°å½•è¡¨2.xlsx');
+xls_position  = fullfile(data_dir, 'æ±‡æ€».xlsx');
 
 % if weight again and "zongzhong" has an added sheet named "new_add"
 is_re_weitht              = false; 
